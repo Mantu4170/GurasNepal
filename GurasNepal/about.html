@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+         <!-- Import Google Fonts -->
+         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Header with Navigation -->
+        <header>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <a href="index.html" class="logo">Nepal Explorer</a>
+            <button class="search-icon" id="search" aria-label="Search">&#128269;</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="about.html" onclick="toggleMenu()">About</a>
+            <a href="#history" onclick="toggleMenu()">History</a>
+            <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+            <a href="#faqs" onclick="toggleMenu()">FAQs</a>
+            <a href="#blogs" onclick="toggleMenu()">Blogs</a>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+        </div>
+    
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    
+        <!-- Search Results -->
+        <div class="search-results" id="searchResults"></div>
+    <!-- About Section -->
+<section class="about-section" id="about">
+    <h2 class="reveal">About Nepal Explorer</h2>
+    <p class="reveal">
+        Welcome to Nepal Explorer, your ultimate guide to discovering the breathtaking landscapes, rich culture, and warm hospitality of Nepal. Whether you're planning your next adventure, seeking cultural insights, or simply curious about this incredible country, Nepal Explorer is here to guide you every step of the way.
+    </p>
+    
+    <!-- Mission Statement with Image and Text -->
+    <div class="mission-container reveal">
+        <img src="mission.jpg" alt="Mission Image" class="mission-image reveal">
+        <div class="mission-text reveal">
+            <h3>Our Mission</h3>
+            <p>
+                At Nepal Explorer, we strive to promote sustainable travel while preserving the natural beauty and cultural heritage of Nepal. Our mission is to provide comprehensive and engaging information that benefits both travelers and local communities.
+            </p>
+        </div>
+    </div>
+    
+    <h3 class="reveal">Key Highlights of Nepal</h3>
+    <div class="card-container">
+        <div class="card reveal">
+            <img src="himalayas.jpg" alt="Himalayas" class="card-image">
+            <div class="card-content">
+                <h4>Majestic Himalayas</h4>
+                <p>
+                    Home to eight of the world's fourteen highest peaks, the Himalayas offer unparalleled trekking and mountaineering experiences.
+                </p>
+            </div>
+        </div>
+        <div class="card reveal">
+            <img src="culture.jpg" alt="Nepalese Culture" class="card-image">
+            <div class="card-content">
+                <h4>Rich Cultural Heritage</h4>
+                <p>
+                    Nepal's diverse cultures and traditions are reflected in its festivals, architecture, and daily life, providing a unique cultural tapestry.
+                </p>
+            </div>
+        </div>
+        <div class="card reveal">
+            <img src="wildlife.jpg" alt="Wildlife" class="card-image">
+            <div class="card-content">
+                <h4>Vibrant Wildlife</h4>
+                <p>
+                    From the endangered Bengal tiger to the playful snow leopard, Nepal's national parks are a haven for wildlife enthusiasts.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <h3 class="reveal">Why Choose Nepal Explorer?</h3>
+    <div class="card-container">
+        <div class="card reveal">
+            <img src="guide.jpg" alt="Expert Guides" class="card-image">
+            <div class="card-content">
+                <h4>Expert Local Guides</h4>
+                <p>
+                    Our team of experienced local guides ensures that you have authentic and safe travel experiences tailored to your interests.
+                </p>
+            </div>
+        </div>
+        <div class="card reveal">
+            <img src="sustainable_travel.jpeg" alt="Sustainable Travel" class="card-image">
+            <div class="card-content">
+                <h4>Sustainable Travel</h4>
+                <p>
+                    We are committed to promoting eco-friendly practices that help preserve Nepal's natural and cultural treasures for future generations.
+                </p>
+            </div>
+        </div>
+        <div class="card reveal">
+            <img src="supporting_local.jpg" alt="Community Support" class="card-image">
+            <div class="card-content">
+                <h4>Supporting Local Communities</h4>
+                <p>
+                    By choosing Nepal Explorer, you contribute to the livelihood of local communities, fostering economic growth and cultural preservation.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+   
+    <h3 class="reveal">Join Us in Exploring Nepal</h3>
+    <p class="reveal">
+        Embark on a journey of a lifetime with Nepal Explorer. Discover hidden gems, engage with local cultures, and create memories that will last forever.
+    </p>
+    <a href="#contact" class="cta-button reveal">Get in Touch</a>
+</section>
+<script>
+    // Scroll Reveal Effect using IntersectionObserver for about section
+    const reveals = document.querySelectorAll('.reveal');
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                // To ensure the animation occurs every time the element enters the viewport,
+                // do not unobserve the element
+            }
+        });
+    }, observerOptions);
+
+    reveals.forEach(reveal => {
+        revealOnScroll.observe(reveal);
+    });
+
+    // Optional: Reset the animation when scrolling out of view to allow re-animation
+    // const resetScrollReveal = new IntersectionObserver((entries, observer) => {
+    //     entries.forEach(entry => {
+    //         if(!entry.isIntersecting){
+    //             entry.target.classList.remove('visible');
+    //         }
+    //     });
+    // }, { threshold: 0.1 });
+
+    // reveals.forEach(reveal => {
+    //     resetScrollReveal.observe(reveal);
+    // });
+
+</script>
+
+
+</body>
+</html>

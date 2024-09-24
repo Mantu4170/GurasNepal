@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Explorer</title>
+    <link rel="stylesheet" href="about.css">
+    <!-- Import Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <a href="index.html" class="logo">Nepal Explorer</a>
+        <button class="search-icon" id="search" aria-label="Search">&#128269;</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="#history" onclick="toggleMenu()">History</a>
+        <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+        <a href="#faqs" onclick="toggleMenu()">FAQs</a>
+        <a href="#blogs" onclick="toggleMenu()">Blogs</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="performSearch()">Search</button>
+    </div>
+
+    <!-- Search Results -->
+    <div class="search-results" id="searchResults"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay reveal">
+            <h1>Discover the Beauty of Nepal</h1>
+            <p>Experience the Rich Culture and Breathtaking Landscapes</p>
+            <a href="#about" class="cta-button">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <main>
+        <section class="about-section" id="about">
+            <h2 class="reveal">About Nepal Explorer</h2>
+            <p class="reveal">
+                Welcome to Nepal Explorer, your ultimate guide to discovering the breathtaking landscapes, rich culture,
+                and warm hospitality of Nepal. Whether you're planning your next adventure, seeking cultural insights,
+                or simply curious about this incredible country, Nepal Explorer is here to guide you every step of the
+                way.
+            </p>
+
+            <!-- Mission Statement with Image and Text -->
+            <div class="mission-container reveal">
+                <img src="mission.jpg" alt="Mission Image" class="mission-image reveal">
+                <div class="mission-text reveal">
+                    <h3>Our Mission</h3>
+                    <p>
+                        At Nepal Explorer, we strive to promote sustainable travel while preserving the natural beauty
+                        and cultural heritage of Nepal. Our mission is to provide comprehensive and engaging information
+                        that benefits both travelers and local communities.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="reveal">Key Highlights of Nepal</h3>
+            <div class="card-container">
+                <div class="card reveal">
+                    <img src="himalayas.jpg" alt="Himalayas" class="card-image">
+                    <div class="card-content">
+                        <h4>Majestic Himalayas</h4>
+                        <p>
+                            Home to eight of the world's fourteen highest peaks, the Himalayas offer unparalleled
+                            trekking and mountaineering experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="culture.jpg" alt="Nepalese Culture" class="card-image">
+                    <div class="card-content">
+                        <h4>Rich Cultural Heritage</h4>
+                        <p>
+                            Nepal's diverse cultures and traditions are reflected in its festivals, architecture, and
+                            daily life, providing a unique cultural tapestry.
+                        </p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="wildlife.jpg" alt="Wildlife" class="card-image">
+                    <div class="card-content">
+                        <h4>Vibrant Wildlife</h4>
+                        <p>
+                            From the endangered Bengal tiger to the playful snow leopard, Nepal's national parks are a
+                            haven for wildlife enthusiasts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="reveal">Why Choose Nepal Explorer?</h3>
+            <div class="card-container">
+                <div class="card reveal">
+                    <img src="guide.jpg" alt="Expert Guides" class="card-image">
+                    <div class="card-content">
+                        <h4>Expert Local Guides</h4>
+                        <p>
+                            Our team of experienced local guides ensures that you have authentic and safe travel
+                            experiences tailored to your interests.
+                        </p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="sustainable_travel.jpeg" alt="Sustainable Travel" class="card-image">
+                    <div class="card-content">
+                        <h4>Sustainable Travel</h4>
+                        <p>
+                            We are committed to promoting eco-friendly practices that help preserve Nepal's natural and
+                            cultural treasures for future generations.
+                        </p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="supporting_local.jpg" alt="Community Support" class="card-image">
+                    <div class="card-content">
+                        <h4>Supporting Local Communities</h4>
+                        <p>
+                            By choosing Nepal Explorer, you contribute to the livelihood of local communities, fostering
+                            economic growth and cultural preservation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <h3 class="reveal">Join Us in Exploring Nepal</h3>
+            <p class="reveal">
+                Embark on a journey of a lifetime with Nepal Explorer. Discover hidden gems, engage with local cultures,
+                and create memories that will last forever.
+            </p>
+            <a href="#contact" class="cta-button reveal">Get in Touch</a>
+        </section>
+
+        <section id="history" class="reveal">
+            <h2>History of Nepal</h2>
+            <p>Nepal's history is a tapestry of diverse cultures, kingdoms, and influences. From ancient civilizations
+                to modern democracy, Nepal has maintained its unique identity while evolving through centuries of
+                change.</p>
+        </section>
+
+        <section id="gallery" class="reveal">
+            <h2>Gallery</h2>
+            <p>Explore our stunning gallery showcasing Nepal’s majestic landscapes, vibrant festivals, and the everyday
+                life of its people.</p>
+            <!-- Add your images here -->
+        </section>
+
+        <section id="faqs" class="reveal">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to the most common questions about Nepal, including travel tips, cultural insights, and
+                more.</p>
+        </section>
+
+        <section id="blogs" class="reveal">
+            <h2>Blogs</h2>
+            <p>Read our latest blogs and articles about traveling in Nepal, cultural experiences, and personal stories.
+            </p>
+        </section>
+
+        <section id="contact" class="reveal">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Get in touch with us through our contact form or email.</p>
+            <!-- Add your contact form here -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Nepal Information Portal. All rights reserved.
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const searchIcon = document.getElementById('search');
+        const searchBar = document.getElementById('searchBar');
+        const searchResults = document.getElementById('searchResults');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('show');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close mobile menu when clicking a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        // Toggle Search Bar
+        searchIcon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent click from propagating to window
+            searchBar.classList.toggle('show');
+            searchResults.classList.remove('show');
+            if (searchBar.classList.contains('show')) {
+                document.getElementById('searchInput').focus();
+            }
+        });
+
+        // Perform Search
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            searchResults.innerHTML = ''; // Clear previous results
+
+            if (query) {
+                // Get all sections
+                const sections = document.querySelectorAll('main section');
+                const results = [];
+
+                sections.forEach(section => {
+                    const title = section.querySelector('h2').innerText.toLowerCase();
+                    const content = section.querySelector('p').innerText.toLowerCase();
+
+                    if (title.includes(query) || content.includes(query)) {
+                        results.push({
+                            title: section.querySelector('h2').innerText,
+                            id: section.id,
+                            snippet: getSnippet(section, query)
+                        });
+                    }
+                });
+
+                if (results.length > 0) {
+                    results.forEach(result => {
+                        const resultLink = document.createElement('a');
+                        resultLink.href = `#${result.id}`;
+                        resultLink.innerHTML = `<strong>${highlightText(result.title, query)}</strong><br><small>${highlightText(result.snippet, query)}</small>`;
+                        resultLink.addEventListener('click', () => {
+                            smoothScrollTo(result.id);
+                            searchResults.classList.remove('show');
+                            searchBar.classList.remove('show');
+                            document.getElementById('searchInput').value = '';
+                        });
+                        searchResults.appendChild(resultLink);
+                    });
+                } else {
+                    const noResult = document.createElement('div');
+                    noResult.style.padding = '10px 15px';
+                    noResult.textContent = 'No matching sections found.';
+                    searchResults.appendChild(noResult);
+                }
+
+                searchResults.classList.add('show');
+            } else {
+                alert('Please enter a search term.');
+            }
+        }
+
+        // Function to get a snippet of the content around the query
+        function getSnippet(section, query) {
+            const content = section.querySelector('p').innerText;
+            const index = content.toLowerCase().indexOf(query);
+            if (index !== -1) {
+                const start = Math.max(0, index - 30);
+                const end = Math.min(content.length, index + 30);
+                return '...' + content.substring(start, end) + '...';
+            }
+            return '';
+        }
+
+        // Function to highlight the query text
+        function highlightText(text, query) {
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span style="background-color: yellow;">$1</span>');
+        }
+
+        // Smooth Scroll Function
+        function smoothScrollTo(id) {
+            const target = document.getElementById(id);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 60, // Adjust for fixed header
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Hide search results when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!searchBar.contains(e.target) && !searchIcon.contains(e.target)) {
+                searchBar.classList.remove('show');
+                searchResults.classList.remove('show');
+            }
+        });
+
+        // Scroll Reveal Effect using IntersectionObserver 
+        const reveals = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(reveal => {
+            revealOnScroll.observe(reveal);
+        });
+
+        // Hero Section Animation on Scroll
+        const heroOverlay = document.querySelector('.hero-overlay');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            heroOverlay.style.opacity = Math.max(1 - scrollY / 400, 0);
+        });
+        
+    </script>
+
+</body>
+
+</html>
